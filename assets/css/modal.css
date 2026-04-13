@@ -1,0 +1,85 @@
+.modal-content {
+    box-shadow: 8px 10px 15px 2px #00000066;
+    min-height: 313px;
+    transition: 0.3s;
+    position: relative;
+    box-sizing: border-box;
+    color: #fff;
+    background: rgba(0, 30, 96, 0.86);
+    background-clip: padding-box;
+    border: solid 2px transparent;
+}
+
+.modal-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(0, 176, 240, 0.5) 0%, rgba(1, 56, 110, 0.5) 24.79%, rgba(0, 154, 245, 0.5) 50.86%, rgba(1, 56, 110, 0.5) 76.11%, rgba(0, 159, 220, 0.5) 100%);
+}
+
+.modal .modal-dialog-centered .modal-content .modal-header {
+    border: none;
+}
+
+.modal .btn-close-modal {
+    position: absolute;
+    top: 28px;
+    right: 29px;
+    width: 28px;
+}
+
+#modal .modal-dialog-centered .modal-content .modal-body .modal-title {
+    background: url(../img/line.png) bottom center no-repeat;
+    background-size: 85% 2px;
+    padding-bottom: 24px;
+    color: #fff;
+    font-family: Constructio Grotesk;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: fit-content;
+    margin: 73px auto 0;
+}
+
+#modal .modal-dialog-centered .modal-content .modal-body #modal-images-container {
+    margin: 17px 25px 26px;
+}
+
+#modal .modal-dialog-centered .modal-content .modal-body #modal-images-container .item-image {
+    margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+    #modal .modal-dialog {
+        min-width: 960px;
+    }
+    #modalSendContact .modal-dialog {
+        min-width: 713px;
+    }
+}
+
+#modalSendContact #modal-images-container img {
+    width: 180px;
+    margin: 100px auto 36px;
+}
+
+#modal-images-container img {
+    max-width: 100% !important;
+    height: 70% !important;
+}
+
+#modalSendContact #modal-title {
+    font-family: Constructio Grotesk;
+    font-size: 3.6rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 65px;
+}

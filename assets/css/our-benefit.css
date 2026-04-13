@@ -1,0 +1,74 @@
+#our-benefit .section-header h2 {
+    background: url(../img/line.png) bottom left no-repeat;
+    background-size: 72% 2px;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1201px) {
+    #our-benefit .section-header {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+    #our-benefit .section-header h2.title {
+        background: url(../img/line.png) bottom center no-repeat;
+        background-size: 72% 2px;
+    }
+}
+
+#our-benefit .benefit-box .benefit-content {
+    --border-color: none;
+    --border-width: 0;
+    --curve-size: 1.5rem;
+    --blur: 30px;
+    --bg: linear-gradient(90deg, #0043a5 0%, #006bbe 50.69%, #0043a5 100%);
+    --color: #ffffff;
+    color: var(--color);
+    /* use position: relative; so that BG is only for .benefit-content */
+    position: relative;
+    z-index: 1;
+    padding: 22px 20px;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    min-height: 110px;
+    font-family: SVN-Gilroy;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: justified;
+    border: 0;
+    clip-path: polygon(0% 0%, calc(100% - var(--curve-size)) 0%, 100% var(--curve-size), 100% 100%, var(--curve-size) 100%, 0 calc(100% - var(--curve-size)));
+    transition: color 250ms;
+    width: 100%;
+}
+
+#our-benefit .benefit-box .benefit-content::after,
+#our-benefit .benefit-box .benefit-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+#our-benefit .benefit-box .benefit-content::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    z-index: -2;
+}
+
+#our-benefit .benefit-box .benefit-content::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5), calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+#our-benefit .benefit-box .benefit-content:where(:hover, :focus)::after {
+    clip-path: polygon(calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+#our-benefit .benefit-box .benefit-content:where(:hover, :focus) {
+    color: #fff;
+}
