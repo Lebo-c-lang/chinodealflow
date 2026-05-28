@@ -1,0 +1,128 @@
+.ct-portfolio {
+    padding: 60px 0;
+}
+
+.ct-portfolio .container .section-header {
+    margin: 0 auto 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.ct-portfolio .container .section-header .title {
+    margin: 0 !important;
+    text-align: center !important;
+    width: fit-content !important;
+}
+
+.ct-portfolio .portfolio-highlight {
+    margin: 0 auto 30px;
+    max-width: 640px;
+}
+
+.ct-portfolio .portfolio-highlight p {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.ct-portfolio .portfolio-highlight-large {
+    display: block;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+.ct-portfolio .portfolio-highlight-small {
+    display: block;
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-top: 0.25rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+    .ct-portfolio .portfolio-highlight-large {
+        font-size: 3.8rem;
+    }
+    .ct-portfolio .portfolio-highlight-small {
+        font-size: 1.2rem;
+    }
+}
+
+.ct-portfolio .container .item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ct-portfolio .container .item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.ct-portfolio .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.ct-portfolio .container span.text-50-plus {
+    font-family: "SVN-Gilroy";
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 73.5px;
+    text-align: left;
+}
+
+/* Desktop layout (6 columns) */
+@media (min-width: 992px) {
+    .ct-portfolio .container .item {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .ct-portfolio .container .item > div {
+        min-height: 120px;
+    }
+    
+    .ct-portfolio .container img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ct-portfolio .container .section-header .h1-title {
+        padding-bottom: 8px;
+    }
+}
+
+/* Mobile layout (3 columns) */
+@media (max-width: 768px) {
+    .ct-portfolio .container .item {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .ct-portfolio .container .section-header .h1-title {
+        padding-bottom: 5px;
+        background-size: 65% 2px;
+    }
+    
+    .ct-portfolio .container .item > div {
+        min-height: 80px;
+    }
+    
+    .ct-portfolio .container img {
+        max-width: 80px;
+        max-height: 80px;
+    }
+}

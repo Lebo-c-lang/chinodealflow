@@ -1,0 +1,101 @@
+#our-benefit .section-header h2 {
+    background: url(../img/line.png) bottom left no-repeat;
+    background-size: 72% 2px;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1201px) {
+    #our-benefit .section-header {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+    #our-benefit .section-header h2.title {
+        background: url(../img/line.png) bottom center no-repeat;
+        background-size: 72% 2px;
+    }
+}
+
+#our-benefit .benefit-box .benefit-content {
+    --border-color: linear-gradient(180deg, rgba(0, 176, 240, 0.85), rgba(0, 101, 204, 0.85));
+    --border-width: 1px;
+    --curve-size: 1.5rem;
+    --blur: 30px;
+    --bg: rgba(5, 15, 44, 0.92);
+    --color: #f8fbff;
+    color: var(--color);
+    position: relative;
+    z-index: 1;
+    padding: 24px 24px;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    min-height: 120px;
+    font-family: SVN-Gilroy;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    text-align: left;
+    background: rgba(3, 9, 33, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 24px 45px rgba(0, 0, 0, 0.25);
+    clip-path: polygon(0% 0%, calc(100% - var(--curve-size)) 0%, 100% var(--curve-size), 100% 100%, var(--curve-size) 100%, 0 calc(100% - var(--curve-size)));
+    transition: color 250ms, box-shadow 250ms, transform 250ms;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #our-benefit .row.g-5 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 0.85rem;
+    }
+    #our-benefit .benefit-box .benefit-content {
+        padding: 14px 12px;
+        min-height: 90px;
+        font-size: 1.4rem;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    #our-benefit .row.g-5 {
+        --bs-gutter-x: 0.8rem;
+        --bs-gutter-y: 0.7rem;
+    }
+    #our-benefit .benefit-box .benefit-content {
+        padding: 12px 10px;
+        min-height: 75px;
+        font-size: 1.2rem;
+        line-height: 17px;
+    }
+}
+
+#our-benefit .benefit-box .benefit-content::after,
+#our-benefit .benefit-box .benefit-content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+#our-benefit .benefit-box .benefit-content::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    z-index: -2;
+}
+
+#our-benefit .benefit-box .benefit-content::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5), calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+#our-benefit .benefit-box .benefit-content:where(:hover, :focus)::after {
+    clip-path: polygon(calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) var(--border-width), calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)), calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+#our-benefit .benefit-box .benefit-content:where(:hover, :focus) {
+    color: #fff;
+}
