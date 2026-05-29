@@ -707,47 +707,84 @@ section {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 100svh;
+        padding: 96px 0 36px;
+    }
+
+    .hero .row > .col-lg-6:first-child {
+        min-height: calc(100svh - 190px);
+        justify-content: center;
+        gap: 4px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
     .hero h1 {
-        font-size: 3.2rem;
-        line-height: 4rem;
+        font-size: clamp(4.4rem, 11vw, 6.4rem);
+        line-height: 0.96;
+        letter-spacing: 0.035em;
+        max-width: 100%;
     }
     .hero h2 {
-        font-size: 2.4rem;
-        line-height: 3.6rem;
+        font-size: clamp(2.6rem, 7.2vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: 0.04em;
+        max-width: 100%;
     }
     .hero h3 {
-        font-size: 2.0rem;
-        line-height: 3.0rem;
+        font-size: clamp(2.4rem, 6.6vw, 3.6rem);
+        line-height: 1.05;
+        letter-spacing: 0.04em;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        min-height: 100svh;
+        padding: 84px 0 28px;
+    }
+
+    .hero .row > .col-lg-6:first-child {
+        min-height: calc(100svh - 150px);
+        gap: 6px;
+        padding-top: 34px;
+        padding-bottom: 28px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
-        line-height: 2.8rem;
+        font-size: clamp(4rem, 13vw, 5.8rem);
+        line-height: 0.96;
+        letter-spacing: 0.015em;
+        word-break: normal;
     }
     .hero h2 {
-        font-size: 1.6rem;
-        line-height: 2.2rem;
+        font-size: clamp(2.2rem, 7.6vw, 3.4rem);
+        line-height: 1.05;
+        letter-spacing: 0.02em;
+        word-break: normal;
     }
     .hero h3 {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        font-size: clamp(2.1rem, 7vw, 3.1rem);
+        line-height: 1.05;
+        letter-spacing: 0.02em;
+        word-break: normal;
     }
 }
 
 @media (max-width: 380px) {
     .hero h1 {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
+        font-size: clamp(3.8rem, 12.7vw, 4.8rem);
+        line-height: 0.96;
     }
     .hero h2 {
-        font-size: 1.4rem;
-        line-height: 1.8rem;
+        font-size: clamp(2rem, 7.2vw, 2.7rem);
+        line-height: 1.05;
     }
     .hero h3 {
-        font-size: 1.2rem;
-        line-height: 1.6rem;
+        font-size: clamp(1.9rem, 6.8vw, 2.6rem);
+        line-height: 1.05;
     }
 }
 
