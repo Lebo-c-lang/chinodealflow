@@ -1,19 +1,23 @@
 @charset "UTF-8";
 .testimonials .container {
-    padding: 0;
+    padding-left: clamp(28px, 5vw, 64px);
+    padding-right: clamp(28px, 5vw, 64px);
+    position: relative;
 }
 
 @media (max-width: 576px) {
     .testimonials .container {
-        width: 80%;
+        width: 100%;
+        padding-left: 28px;
+        padding-right: 28px;
     }
 }
 
 .testimonials .testimonial-item {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 20px 0;
-    padding: 0 20px;
-    border-radius: 5px;
+    padding: 34px 24px;
+    border-radius: 6px;
     min-height: 271px;
     display: flex;
     flex-direction: column;
@@ -23,17 +27,13 @@
     transition: 0.3s;
     position: relative;
     color: #fff;
-    background: #000;
-    background-clip: padding-box;
+    background: linear-gradient(rgba(1, 12, 36, 0.96), rgba(1, 12, 36, 0.96)) padding-box, linear-gradient(to right, rgba(0, 176, 240, 0.9) 0%, rgba(1, 56, 110, 0.68) 24.79%, rgba(0, 154, 245, 0.9) 50.86%, rgba(1, 56, 110, 0.68) 76.11%, rgba(0, 159, 220, 0.9) 100%) border-box;
     border: solid 2px transparent;
-}
-
-.testimonials .container {
-    position: relative;
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
 }
 
 .testimonials .testimonial-item:before {
-    content: "";
+    content: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -42,7 +42,7 @@
     z-index: -1;
     margin: -2px;
     border-radius: inherit;
-    background: #000;
+    background: linear-gradient(to right, rgba(0, 176, 240, 0.9) 0%, rgba(1, 56, 110, 0.68) 24.79%, rgba(0, 154, 245, 0.9) 50.86%, rgba(1, 56, 110, 0.68) 76.11%, rgba(0, 159, 220, 0.9) 100%);
 }
 
 .testimonials .testimonial-item h3 {
@@ -130,12 +130,14 @@
 
 @media (max-width: 480px) {
     .testimonials .container {
-        width: 90%;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
     }
     .testimonials .testimonial-item {
         min-height: 220px;
         margin: 15px 0;
-        padding: 0 12px;
+        padding: 28px 18px;
     }
     .testimonials .testimonial-item h3 {
         font-size: 1.6rem;
@@ -210,13 +212,11 @@
 }
 
 .ct-swiper-button-prev {
-    left: 0;
-    transform: translateX(-50%);
+    left: clamp(8px, 2vw, 18px);
 }
 
 .ct-swiper-button-next {
-    right: 0;
-    transform: translateX(50%);
+    right: clamp(8px, 2vw, 18px);
 }
 
 @media (max-width: 1024px) {
