@@ -31,7 +31,7 @@ const testimonialsConfig = [{
                 label: "Gateio",
             },
             {
-                src: "assets/img/modals/centralized-exchanges/Bitget.jpg",
+                src: "assets/img/modals/centralized-exchanges/bitget.jpg",
                 label: "Bitget",
             },
             {

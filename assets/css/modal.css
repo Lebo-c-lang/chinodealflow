@@ -149,7 +149,10 @@
 
 #modal-images-container img {
     max-width: 100% !important;
-    height: 70% !important;
+    width: auto;
+    height: auto !important;
+    max-height: 70px;
+    object-fit: contain;
 }
 
 @media (min-width: 992px) {
